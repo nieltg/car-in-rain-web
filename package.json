@@ -1,0 +1,32 @@
+{
+  "name": "car-in-rain",
+  "version": "0.0.1",
+  "description": "A car in raining scene on WebGL using THREE.JS",
+  "repository": "https://github.com/nieltg/car-in-rain-web",
+  "author": "nieltg",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "webpack",
+    "precommit": "lint-staged"
+  },
+  "devDependencies": {
+    "husky": "^0.14.3",
+    "lint-staged": "^7.2.2",
+    "prettier": "^1.14.2",
+    "ts-loader": "^5.1.0",
+    "typescript": "^3.0.3",
+    "webpack": "^4.19.0",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.8"
+  },
+  "lint-staged": {
+    "lib/**/*.{tsx,ts,jsx,js}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "prettier": {
+    "semi": false
+  }
+}
