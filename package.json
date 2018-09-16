@@ -25,7 +25,8 @@
     "typescript": "^3.0.3",
     "webpack": "^4.19.0",
     "webpack-cli": "^3.1.0",
-    "webpack-dev-server": "^3.1.8"
+    "webpack-dev-server": "^3.1.8",
+    "webpack-glsl-loader": "^1.0.1"
   },
   "dependencies": {
     "random-js": "^1.0.8",

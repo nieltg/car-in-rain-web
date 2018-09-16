@@ -11,6 +11,10 @@ module.exports = {
         test: /\.tsx?$/,
         use: "ts-loader",
         exclude: /node-modules/
+      },
+      {
+        test: /\.glsl$/,
+        loader: 'webpack-glsl-loader'
       }
     ]
   },
