@@ -4,7 +4,6 @@ const distDir = path.resolve(__dirname, "dist")
 
 const config = {
   entry: "./src/index.ts",
-  devtool: "inline-source-map",
   module: {
     rules: [
       {
