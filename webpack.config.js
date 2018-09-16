@@ -1,3 +1,4 @@
+const webpack = require("webpack")
 const path = require("path")
 
 const distDir = path.resolve(__dirname, "dist")
@@ -18,8 +19,17 @@ const config = {
     ]
   },
   resolve: {
+    alias: {
+      three$: "three/build/three.min.js",
+      "three/.*$": "three"
+    },
     extensions: [".tsx", ".ts", ".js"]
   },
+  plugins: [
+    new webpack.ProvidePlugin({
+      THREE: "three"
+    })
+  ],
   output: {
     filename: "main.js",
     path: distDir
