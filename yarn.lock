@@ -8,6 +8,10 @@
   dependencies:
     any-observable "^0.3.0"
 
+"@types/random-js@^1.0.31":
+  version "1.0.31"
+  resolved "https://registry.yarnpkg.com/@types/random-js/-/random-js-1.0.31.tgz#18a8bcc075afa504421e638fcbe021f27e802941"
+
 "@types/three@^0.92.20":
   version "0.92.20"
   resolved "https://registry.yarnpkg.com/@types/three/-/three-0.92.20.tgz#f9390b665b02e809ad0a2dca41e2ac071133f9b3"
@@ -2799,6 +2803,10 @@ querystring@0.2.0:
 querystringify@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/querystringify/-/querystringify-2.0.0.tgz#fa3ed6e68eb15159457c89b37bc6472833195755"
+
+random-js@^1.0.8:
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/random-js/-/random-js-1.0.8.tgz#968fd689a6f25d6c0aac766283de2f688c9c190a"
 
 randombytes@^2.0.0, randombytes@^2.0.1, randombytes@^2.0.5:
   version "2.0.6"
