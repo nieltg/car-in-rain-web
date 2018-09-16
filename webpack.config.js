@@ -2,7 +2,7 @@ const path = require("path")
 
 const distDir = path.resolve(__dirname, "dist")
 
-module.exports = {
+const config = {
   entry: "./src/index.ts",
   devtool: "inline-source-map",
   module: {
@@ -14,7 +14,7 @@ module.exports = {
       },
       {
         test: /\.glsl$/,
-        loader: 'webpack-glsl-loader'
+        loader: "webpack-glsl-loader"
       }
     ]
   },
@@ -30,4 +30,12 @@ module.exports = {
     compress: true,
     port: 9000
   }
+}
+
+module.exports = (_env, argv) => {
+  if (argv.mode === "development") {
+    config.devtool = "inline-source-map"
+  }
+
+  return config
 }
