@@ -7,8 +7,10 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "build": "webpack",
+    "build": "webpack --mode production",
+    "serve": "webpack-dev-server --mode development",
     "precommit": "lint-staged",
+    "prepare": "$npm_execpath run build"
   },
   "devDependencies": {
     "@types/three": "^0.92.20",
