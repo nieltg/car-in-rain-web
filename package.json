@@ -33,8 +33,8 @@
     "three": "^0.96.0"
   },
   "lint-staged": {
-    "lib/**/*.{tsx,ts,jsx,js}": [
-      "tslint -p .",
+    "src/**/*.{tsx,ts,jsx,js}": [
+      "tslint -p . --fix",
       "git add"
     ]
   },
