@@ -1,11 +1,13 @@
-import { OrbitControls, PerspectiveCamera, Scene, WebGLRenderer } from "three"
+import { PerspectiveCamera, Scene, WebGLRenderer } from "three"
+
+import * as THREE from "three"
 import "three/examples/js/controls/OrbitControls"
 
 import { Rain } from "./rain/Rain"
 
 export class Screen {
   public readonly renderer: WebGLRenderer
-  public readonly control: OrbitControls
+  public readonly control: any
 
   public readonly scene = new Scene()
   public readonly camera = new PerspectiveCamera(75, 1, 1, 10)
@@ -18,7 +20,7 @@ export class Screen {
     this.renderer = new WebGLRenderer({ canvas })
     this.canvasToDisplaySize(true)
 
-    this.control = new OrbitControls(this.camera, canvas)
+    this.control = new (THREE as any).OrbitControls(this.camera, canvas)
 
     this.renderer.setClearColor(0xffffff)
     this.camera.position.z = 1

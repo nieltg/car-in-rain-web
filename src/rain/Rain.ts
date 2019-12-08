@@ -16,9 +16,9 @@ function* generateVertices(n: number) {
 
   while (n--) {
     const coord3d = [
-      genCoord1(Random.engines.nativeMath),
-      genCoord2(Random.engines.nativeMath),
-      genCoord1(Random.engines.nativeMath)
+      genCoord1(Random.nativeMath),
+      genCoord2(Random.nativeMath),
+      genCoord1(Random.nativeMath)
     ]
 
     yield* coord3d
