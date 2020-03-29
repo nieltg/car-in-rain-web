@@ -16,6 +16,14 @@ jobs:
         with:
           node-version: '13.x'
 
+      - name: Cache
+        uses: actions/cache@v1
+        with:
+          path: ~/.pnpm-store
+          key: ${{ runner.os }}-pnpm-${{ hashFiles('pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-
+
       - name: Build
         run: |
           curl -L https://raw.githubusercontent.com/pnpm/self-installer/master/install.js | node
