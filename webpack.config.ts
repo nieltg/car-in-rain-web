@@ -1,9 +1,9 @@
-const webpack = require("webpack")
-const path = require("path")
+import { resolve } from "path"
+import { Configuration, ConfigurationFactory, ProvidePlugin } from "webpack"
 
-const distDir = path.resolve(__dirname, "dist")
+const distDir = resolve(__dirname, "dist")
 
-const config = {
+const config: Configuration = {
   entry: "./src/index.ts",
   module: {
     rules: [
@@ -26,7 +26,7 @@ const config = {
     extensions: [".tsx", ".ts", ".js"]
   },
   plugins: [
-    new webpack.ProvidePlugin({
+    new ProvidePlugin({
       THREE: "three"
     })
   ],
@@ -41,10 +41,10 @@ const config = {
   }
 }
 
-module.exports = (_env, argv) => {
+module.exports = <ConfigurationFactory>((_env, argv) => {
   if (argv.mode === "development") {
     config.devtool = "inline-source-map"
   }
 
   return config
-}
+})
